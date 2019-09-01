@@ -15,7 +15,7 @@ def packet_processor(packet):
     a = list(payload)
     payload = Raw(a[:8])
 
-    if protocol == 17 or protocol == 1 or protocol == 6:  # UDP or TCP
+    if protocol == 17 or protocol == 1 or protocol == 6:  # UDP or ICMP or TCP
         crafted_payload = packet
         crafted_payload.payload = payload
 
